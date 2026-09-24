@@ -1,0 +1,86 @@
+/* Nero — design tokens compiled to CSS custom properties.
+   Light theme is the default; dark applies via prefers-color-scheme
+   or by setting data-theme="dark" on <html> (see js/main.js). */
+
+:root,
+:root[data-theme="light"] {
+  --surface: #ffffff;
+  --surface-subtle: #f6f5f2;
+  --surface-sunken: #edebe6;
+  --ink: #141614;
+  --ink-muted: #565a56;
+  --line: #e3e0d9;
+  --line-strong: #85897f;
+  --brand: var(--ink);
+  --on-brand: #ffffff;
+  --accent: #b5431a;
+  --on-accent: #ffffff;
+  --accent-soft: #fbeee7;
+  --success: #1e6b47;
+  --success-soft: #e5f3eb;
+  --danger: #b3261e;
+  --focus: #2b59c3;
+  --shadow-float: 0 8px 32px rgba(20, 22, 20, 0.12);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --surface: #111312;
+    --surface-subtle: #191b1a;
+    --surface-sunken: #222524;
+    --ink: #f4f3ef;
+    --ink-muted: #a3a7a1;
+    --line: #2d302e;
+    --line-strong: #7d827b;
+    --brand: var(--ink);
+    --on-brand: #141614;
+    --accent: #ef8a5c;
+    --on-accent: #141614;
+    --accent-soft: #3a2419;
+    --success: #6fcf9f;
+    --success-soft: #173025;
+    --danger: #ff8a80;
+    --focus: #8fb0ff;
+    --shadow-float: 0 8px 32px rgba(0, 0, 0, 0.5);
+  }
+}
+
+:root[data-theme="dark"] {
+  --surface: #111312;
+  --surface-subtle: #191b1a;
+  --surface-sunken: #222524;
+  --ink: #f4f3ef;
+  --ink-muted: #a3a7a1;
+  --line: #2d302e;
+  --line-strong: #7d827b;
+  --brand: var(--ink);
+  --on-brand: #141614;
+  --accent: #ef8a5c;
+  --on-accent: #141614;
+  --accent-soft: #3a2419;
+  --success: #6fcf9f;
+  --success-soft: #173025;
+  --danger: #ff8a80;
+  --focus: #8fb0ff;
+  --shadow-float: 0 8px 32px rgba(0, 0, 0, 0.5);
+}
+
+:root {
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-6: 24px;
+  --space-8: 32px;
+  --space-12: 48px;
+  --space-16: 64px;
+  --space-24: 96px;
+
+  --radius-sm: 4px;
+  --radius-md: 12px;
+  --radius-lg: 20px;
+  --radius-pill: 999px;
+
+  --font-display: "Instrument Serif", "Iowan Old Style", Georgia, serif;
+  --font-sans: "Hanken Grotesk", system-ui, -apple-system, "Segoe UI", sans-serif;
+}
